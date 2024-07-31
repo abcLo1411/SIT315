@@ -1,5 +1,5 @@
 // C++ code
-//
+//tell the compiler that it can't optimize it away using volatile
 volatile byte led = 0;
 volatile bool Mo_status = false;
 
@@ -14,7 +14,7 @@ void setup()
   PCMSK2 |= 0b0000100;	//enalbe interrupts on pin2
   
   Serial.begin(9600);	//enalbe Serial port
-  turn_onLED();			//Initialise LED
+  turn_onLED();		//Initialise LED
 
 }
 
